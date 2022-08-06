@@ -1,0 +1,21 @@
+{
+  "name": "wx-mini-program-ts-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint:eslint": "eslint --cache --max-warnings 0  \"src/**/*.{ts,wxml}\" --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "@wxml/parser": "^0.4.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-wxml": "^0.7.4",
+    "miniprogram-api-typings": "^3.5.0",
+    "typescript": "^4.7.4"
+  }
+}
