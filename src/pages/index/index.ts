@@ -1,23 +1,13 @@
-// index.ts
-
-import type { Data } from './type';
-// 获取应用实例
-// const app = getApp<IAppOption>();
-// function createPage<O extends WechatMiniprogram.Page.Data<WechatMiniprogram.Page.DataOption>, C extends WechatMiniprogram.Page.CustomOption>(options: WechatMiniprogram.Page.Options<O, C>) {
-//   return Page<Data, CustomOption>(options);
-// }
-// createPage;
-// app;
-// eslint-disable-next-line @typescript-eslint/ban-types
-Page<Data, CustomOption>({
+Page({
   data: {
     name:'string',
-    // motto: 'Hello World',
-    // userInfo: {},
-    // hasUserInfo: false,
-    // canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    // canIUseGetUserProfile: false,
-    // canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUseGetUserProfile: false,
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    _name:'ss',
   },
   // 事件处理函数
   bindViewTap() {
@@ -26,6 +16,7 @@ Page<Data, CustomOption>({
     });
   },
   onLoad() {
+    console.log(this.data.canIUseOpenData);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     if (wx.getUserProfile) {
@@ -55,6 +46,12 @@ Page<Data, CustomOption>({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
+    });
+  },
+  setName(s: any) {
+    console.log(s);
+    this.setData({
+      _name:'sss',
     });
   },
 });

@@ -1,13 +1,16 @@
 <!-- index.wxml -->
 <view class="container">
   <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
+    <button open-type="getPhoneNumber">getPhoneNsumber</button>
+    <!-- <block wx:if="{{canIUseOpenData}}">
+      <view>canIUseOpenData</view>
       <view class="userinfo-avatar" bindtap="bindViewTap">
         <open-data type="userAvatarUrl"></open-data>
       </view>
       <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
+    </block> -->
+    <block wx:if="{{!hasUserInfo}}">
+      <view>button bindgetuserinfo</view>
       <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">获取头像昵称</button>
       <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
          获取头像昵称
@@ -15,10 +18,17 @@
       <view wx:else>请使用1.4.4及以上版本基础库</view>
     </block>
     <block wx:else>
+      <view>show userInfo</view>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+
+  <button open-type="openSetting">openSetting</button>
+  <button open-type="feedback">feedback</button>
+  <button open-type="chooseAvatar">chooseAvatar</button>
+  <button lang='en' bindtap='setName'>setName</button>
+  <text>{{_name}}</text>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
