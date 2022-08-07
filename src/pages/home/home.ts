@@ -1,4 +1,7 @@
+import { useRouter } from '../../router/index';
+
 // pages/home/home.ts
+const router = useRouter();
 Page({
 
   /**
@@ -11,37 +14,37 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    console.log(options);
-    console.log('logs onLoad');
+  onLoad() {
+    console.log('onLoad');
+    console.log(router);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    console.log('logs onReady');
+    console.log('onReady');
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    console.log('logs onShow');
+    console.log('onShow');
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide() {
-    console.log('logs onHide');
+    console.log('onHide');
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload() {
-    console.log('logs onUnload');
+    console.log('onUnload');
   },
 
   /**
@@ -63,5 +66,13 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  toCart() {
+    router.push({
+      url: '../logs/logs',
+      query: {
+        from: '',
+      },
+    });
   },
 });

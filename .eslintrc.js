@@ -144,7 +144,6 @@ module.exports = {
     ],
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'error',
-    'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
     'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
@@ -174,7 +173,7 @@ module.exports = {
     // '@typescript-eslint/parameter-properties': 'off',
     // '@typescript-eslint/no-empty-interface': 'off',
     // '@typescript-eslint/ban-ts-ignore': 'off',
-    // '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
     // '@typescript-eslint/no-non-null-assertion': 'off',
     // '@typescript-eslint/explicit-module-boundary-types': 'off',
     // '@typescript-eslint/ban-types': 'off',
@@ -182,8 +181,29 @@ module.exports = {
     '@typescript-eslint/triple-slash-reference': 'off',
 
     'no-useless-constructor': 'off',
-    indent:['error', 2],
+    indent: ['error', 2],
     'quote-props': ['error', 'as-needed'],
+    'key-spacing': [
+      2,
+      {
+        beforeColon: false,
+        afterColon: true,
+      },
+    ],
+    'keyword-spacing': [
+      2,
+      {
+        before: true,
+        after: true,
+      },
+    ],
+    'new-cap': [
+      2,
+      {
+        newIsCap: true,
+        capIsNew: false,
+      },
+    ],
 
   },
 };

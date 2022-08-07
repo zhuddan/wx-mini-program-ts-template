@@ -16,6 +16,7 @@
     "noUnusedParameters": true,
     "strict": true,
     "strictPropertyInitialization": true,
+    "resolveJsonModule":true,
     "lib": ["ES2020"],
     "typeRoots": [
       "node_modules/@types",
